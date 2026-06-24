@@ -146,9 +146,9 @@ function PersonaSection() {
 
 // ── Feature grids per use case ────────────────────────────────────────────────
 const scientistFeatures = [
-  { icon: <Atom {...iSz} />,  color: 'sage-light'  as const, heading: 'Protein structure prediction', body: 'State-of-the-art accuracy on novel folds — exceeding AlphaFold2 GDT_TS benchmarks.' },
-  { icon: <Flask {...iSz} />, color: 'sage-dark'   as const, heading: 'Small-molecule screening',      body: '10× faster than the previous SOTA at 100× lower cost per prediction.' },
-  { icon: <Dna {...iSz} />,   color: 'sage-medium' as const, heading: 'Multi-molecular design',        body: 'Co-fold proteins, ligands, DNA, and RNA in a single end-to-end prediction run.' },
+  { icon: <Atom {...iSz} />,  color: 'sage-pale' as const, heading: 'Protein structure prediction', body: 'State-of-the-art accuracy on novel folds — exceeding AlphaFold2 GDT_TS benchmarks.' },
+  { icon: <Flask {...iSz} />, color: 'sage-pale' as const, heading: 'Small-molecule screening',      body: '10× faster than the previous SOTA at 100× lower cost per prediction.' },
+  { icon: <Dna {...iSz} />,   color: 'sage-pale' as const, heading: 'Multi-molecular design',        body: 'Co-fold proteins, ligands, DNA, and RNA in a single end-to-end prediction run.' },
 ];
 
 const developerFeatures = [
@@ -158,9 +158,9 @@ const developerFeatures = [
 ];
 
 const enterpriseFeatures = [
-  { icon: <Building {...iSz} />,    color: 'tierra-100' as const, heading: 'VPC & on-premise deployment', body: 'All compute stays inside your infrastructure. No data leaves your perimeter.' },
-  { icon: <ShieldCheck {...iSz} />, color: 'tierra-200' as const, heading: 'SOC 2 Type II certified',      body: 'Full audit trail, role-based access control, and end-to-end encryption at rest and in transit.' },
-  { icon: <Community {...iSz} />,   color: 'tierra-100' as const, heading: 'Dedicated success team',       body: 'Onboarding, model integration support, and quarterly business reviews included.' },
+  { icon: <Building {...iSz} />,    color: 'tierra-50' as const, heading: 'VPC & on-premise deployment', body: 'All compute stays inside your infrastructure. No data leaves your perimeter.' },
+  { icon: <ShieldCheck {...iSz} />, color: 'tierra-50' as const, heading: 'SOC 2 Type II certified',      body: 'Full audit trail, role-based access control, and end-to-end encryption at rest and in transit.' },
+  { icon: <Community {...iSz} />,   color: 'tierra-50' as const, heading: 'Dedicated success team',       body: 'Onboarding, model integration support, and quarterly business reviews included.' },
 ];
 
 // ── CTA rows ──────────────────────────────────────────────────────────────────
@@ -235,7 +235,7 @@ export const UseCases: Story = {
             </>
           }
           media={
-            <CardGroup>
+            <CardGroup className="flex-col gap-lg">
               {developerFeatures.map((f) => (
                 <CardMedium
                   key={f.heading}

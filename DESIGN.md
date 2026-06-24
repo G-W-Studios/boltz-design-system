@@ -1014,13 +1014,25 @@ Cards use the Tierra, Blue, and Sage colour families across four shades (Pale �
 
 ### Shade selection by context
 
-| Section background | Card shade to use |
+The scale always steps up relative to the background. White is the lightest surface, so cards on white use the palest shades. Tinted sections use darker shades so cards still read against the background.
+
+| Section background | Card shades to use |
 |---|---|
-| White / light neutral | Light, Medium, or Dark — never Pale |
-| Sage-Pale (#EDF7ED) | Sage-Light, Sage-Medium, or Sage-Dark |
-| Blue-Pale (#EEF6FA) | Blue-Light, Blue-Medium, or Blue-Dark |
-| Tierra-100 (#F7F2E9) | Tierra-200, Tierra-500 |
-| Dark (#232323) | Any pale/light — reverses to high contrast |
+| White (`#FFFFFF`) | **Pale variants only** — Sage-Pale, Blue-Pale, Tierra-50 |
+| Sage-Pale section | Sage-Light, Sage-Medium, or Sage-Dark |
+| Blue-Pale section | Blue-Light, Blue-Medium, or Blue-Dark |
+| Tierra-100 section | Tierra-200 or Tierra-500 |
+| Dark (`#232323`) | Any pale or light variant — high contrast reversal |
+
+### Card gaps — connected vs standalone
+
+Cards are always grouped using one of two gap sizes:
+
+**Connected — 8px (`gap-sm`):** Cards that form a single unified visual composition. Typically an asymmetric group: one large dominant card paired with smaller accent cards. The tight gap makes them read as one block.
+
+**Standalone — 24px (`gap-lg`):** Independent equal-weight cards. Feature grids, model lists, capability overviews — any layout where each card stands on its own. The wider gap gives each card breathing room.
+
+`FeatureGrid` always uses standalone (24px) internally. `CardGroup` defaults to connected (8px) — override with `className="gap-lg"` for standalone layouts.
 
 ### No strokes on cards
 

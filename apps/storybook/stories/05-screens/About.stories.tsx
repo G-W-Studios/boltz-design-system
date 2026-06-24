@@ -71,17 +71,17 @@ const storyItems = [
 // ── Values / principles ───────────────────────────────────────────────────────
 const values = [
   {
-    color: 'sage-light' as const,
+    color: 'sage-pale' as const,
     heading: 'Open by default',
     body: 'Our foundation models are published with weights and benchmarks. Science advances faster when tools are shared freely.',
   },
   {
-    color: 'sage-dark' as const,
+    color: 'blue-pale' as const,
     heading: 'Frontier accuracy',
     body: "We don't ship a model until it sets a new state-of-the-art. Benchmark performance is a prerequisite, not a goal.",
   },
   {
-    color: 'sage-medium' as const,
+    color: 'tierra-50' as const,
     heading: 'Built for researchers',
     body: 'Every product decision is validated with working scientists. Speed, interpretability, and real-workflow fit always win.',
   },
