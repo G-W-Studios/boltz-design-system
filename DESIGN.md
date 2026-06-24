@@ -2669,3 +2669,87 @@ Status colors operate entirely separately from the brand palette. `{colors.sage-
 .status-banner--success { background: var(--status-success-surface); color: var(--status-success); }
 .status-banner--info    { background: var(--status-info-surface);    color: var(--status-info); }
 ```
+
+---
+
+## Screens
+
+The six built screens, their Storybook story paths, and the section components used in order.
+
+| Screen | Story | Sections (top → bottom) |
+|---|---|---|
+| **Landing** | `05-Screens/Landing` | NavBar · PrimaryHero (sage, protein render) · AboutNews · Models accordion + protein render (tierra-100 band) · PlatformFeatureSection (dark) · CommunitySection · Footer |
+| **Platform** | `05-Screens/Platform` | NavBar (dark) · PrimaryHero (dark, dashboard bleed) · AboutNews · SplitSection (products list) · Security FeatureGrid (sage-pale) · PricingSection · CommunitySection · Footer |
+| **API** | `05-Screens/API` | NavBar · PrimaryHero (blue, protein render) · SplitSection + highlight card · TabBar + CodeBlock (use cases) · IntegrationsSection · ModelAccordion · PricingSection · CommunitySection · Footer |
+| **Recent News** | `05-Screens/Recent news` | NavBar · PageHeader · FilterTabBar + view toggle · NewsItem grid · "Load more" TextButton · Footer |
+| **Blog Post** | `05-Screens/Blog post` | NavBar · back link + badges · BlogThumbnail hero · article summary+CTA split · prose body · NewsGrid (related) · Footer |
+| **Case Study** | `05-Screens/Case study` | NavBar · back link + badges · BlogThumbnail hero · article summary+CTA split · tabbed CodeBlock · PricingSection comparison · closing image · Footer |
+
+---
+
+## @boltz/ui Component Reference
+
+All components exported from `packages/ui/src/index.ts`. Import as `import { X } from '@boltz/ui'`.
+
+### Primitives
+
+| Component | Exports | Use when |
+|---|---|---|
+| **Logo** | `Logo`, `LogoMark` | Boltz wordmark; `LogoMark` for mark-only |
+| **Button** | `Button` | Full-pill CTA — variants: `black`, `white`, `outlined` |
+| **TextButton** | `TextButton` | Inline text link with optional ↗ arrow |
+| **IconButton** | `IconButton` | Icon-only button |
+| **EyebrowLabel** | `EyebrowLabel` | "• Section name" pill — accepts leading icon |
+| **Badge** | `Badge` | 28px filled pill — variants: `primary`, `sage`, `blue` |
+| **Icon** | `Icon` | Thin wrapper around Iconoir SVGs |
+| **IconContainer** | `IconContainer` | 40px rounded square, light or dark variant |
+| **NavBar** | `NavBar`, `NavLink` | Sticky nav; `tone="light"\|"dark"`; `NavLink` accepts `active` prop |
+| **NavCta** | `NavCta` | "Get early access" filled black pill in nav |
+| **CodeBlock** | `CodeBlock` | Syntax-highlighted code with tab support |
+| **Embed** | `Embed` | Responsive iframe |
+| **Carousel** | `Carousel` | Horizontal scroll carousel |
+| **Blob** | `Blob`, `BLOB_COUNT` | Decorative SVG blob shapes (0–15) |
+| **BlogThumbnail** | `BlogThumbnail` | Article cover — tones: `sage`, `blue`, `tierra`; see BLOG-THUMBNAIL-GUIDE.md |
+| **Thumbnail** | `Thumbnail`, `placeholderImage` | Generic image thumbnail |
+| **ProgressBar** | `ProgressBar` | Horizontal progress/comparison bar |
+| **MetricComparison** | `MetricComparison` | Side-by-side metric bar chart |
+| **StatMetric** | `StatMetric`, `StatMetricRow` | Single stat value + label; row wrapper |
+
+### Cards
+
+| Component | Exports | Use when |
+|---|---|---|
+| **Card** | `Card`, `CardSmall`, `CardMedium`, `CardWide`, `CardCaseStudy`, `CardGroup` | `CardMedium` takes `color` prop (sage-dark/medium/light, blue-*, tierra-*); `CardWide` is the full-width dark CTA card; `CardCaseStudy` is the community case card |
+
+### List, Tab & Accordion
+
+| Component | Exports | Use when |
+|---|---|---|
+| **ListItem** | `ListItem`, `ListItemApp`, `ListItemTab`, `ListItemTabGroup` | Feature list rows with icon; `ListItemTabGroup` for persona/use-case switcher |
+| **TabBar** | `TabBar`, `Tab`, `FilterTabBar`, `ViewToggle` | `FilterTabBar` = news category filter with grid/list toggle |
+| **Accordion** | `Accordion`, `AccordionItem`, `AccordionBadge`, `AccordionActions` | Radix accordion — model listings and expandable content |
+
+### Section components
+
+| Component | Exports | Use when |
+|---|---|---|
+| **Section** | `Section` | Generic section wrapper with background + padding tokens |
+| **SectionHeader** | `SectionHeader` | Eyebrow + title + optional action row |
+| **Hero** | `Hero` | Base hero band |
+| **PrimaryHero** | `PrimaryHero` | Full marketing hero — `tone="sage"\|"blue"\|"dark"\|"tierra"` |
+| **SplitSection** | `SplitSection` | Two-column content + media split; `mediaPosition="left"\|"right"` |
+| **AboutNews** | `AboutNews` | Left copy block + right news list — "About us" + latest posts |
+| **FeatureGrid** | `FeatureGrid` | N-column icon + text feature grid |
+| **CTABand** | `CTABand` | Full-width CTA band |
+| **StatBand** | `StatBand` | Horizontal row of stat metrics |
+| **NewsGrid** | `NewsGrid` | Responsive article card grid |
+| **NewsItem** | `NewsItem` | Single article row or card (list or grid view) |
+| **PageHeader** | `PageHeader` | Page-level title + subtitle (e.g. news index header) |
+| **IntegrationsSection** | `IntegrationsSection` | Integration partner logo + name grid |
+| **ModelAccordion** | `ModelAccordion` | Model listing accordion with badges |
+| **ModelCard** | `ModelCard` | Standalone model card tile — tones: `sage`, `blue`, `tierra` |
+| **PlatformFeatureSection** | `PlatformFeatureSection` | Dark platform hero card + 4-up feature cells + media slot |
+| **CommunitySection** | `CommunitySection` | Case study + StatBand + CTABand rows on sage-pale background |
+| **PricingSection** | `PricingSection` | Tabbed pricing with use-case description + cost comparison |
+| **LinkSection** | `LinkSection`, `LinkSectionRow` | Footer-style link column group |
+| **Footer** | `Footer` | Site footer with logo + link columns |
