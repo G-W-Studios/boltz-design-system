@@ -10,7 +10,7 @@ description: |
 
   Motion is purposeful and minimal: duration-fast (100ms) for colour swaps, duration-base (200ms) for state changes, duration-slow (350ms) for accordion/modal transitions, all on cubic-bezier(0.4, 0, 0.2, 1). Buttons scale to 0.97 on press. The protein render rotates on a 12s loop. Semantic status colours (error #CC4444, warning #C97B22, success #2D7A3F, info #2E6DA4) are used only for inline validation and system feedback — never as brand fills.
 
-  An AI generating new Boltz assets can: (1) keep the page background white — only individual section bands use Sage, Blue, or Tierra tints; (2) match card colour family to section background — Sage section = Sage cards only, Blue section = Blue cards only, Tierra section = Tierra cards only; mixing families is always wrong; (3) never add a border or stroke to cards — background colour alone separates them; (4) must use neutral black (#232323) for all primary CTA buttons; (4) keep all interactive elements full-pill — no rectangular buttons; (5) prefix major section headlines with an eyebrow label in the format "• Section name" (sentence case, bullet as literal content character); (6) sequence page content to lead with capability claims before community stats. The brand fails when it looks like cold SaaS (blue CTAs, all-coloured canvas, bordered cards, rectangular buttons, drop shadows) or loses the warm earthy surface temperature.
+  An AI generating new Boltz assets can: (1) keep the page background white — coloured sections must always be surrounded by white sections on both sides; two coloured sections in a row is always wrong; (2) match card colour family to section background — Sage section = Sage cards only, Blue section = Blue cards only, Tierra section = Tierra cards only; mixing families is always wrong; (3) never add a border or stroke to cards — background colour alone separates them; (4) must use neutral black (#232323) for all primary CTA buttons; (4) keep all interactive elements full-pill — no rectangular buttons; (5) prefix major section headlines with an eyebrow label in the format "• Section name" (sentence case, bullet as literal content character); (6) sequence page content to lead with capability claims before community stats. The brand fails when it looks like cold SaaS (blue CTAs, all-coloured canvas, bordered cards, rectangular buttons, drop shadows) or loses the warm earthy surface temperature.
 
 colors:
   # Background & Surface
@@ -910,9 +910,14 @@ The desktop grid is **12 columns × 96px** with a **20px gutter**, contained wit
 
 ### Page band rhythm
 
-**The page background is always white (`#FFFFFF`).** Coloured section bands are placed on top of this white canvas — they are the exception, not the base. A typical page has 2–4 coloured bands among mostly white sections. The contrast between white and tinted bands is what gives the rhythm its effect. Never colour the entire page background.
+**The page background is always white (`#FFFFFF`).** Coloured section bands are placed on top of this white canvas — they are the exception, not the base. The contrast between white and tinted bands is what gives the rhythm its effect. Never colour the entire page background.
 
-Sections use Sage, Blue, or Tierra colours to create atmosphere and visual rhythm. Avoid placing two identical-background bands directly adjacent.
+**Every coloured section must be surrounded by white sections.** The only valid patterns are:
+
+- `White → Coloured → White → Coloured → White` (alternating)
+- `White → White → White` (all white, no coloured bands)
+
+A coloured section must never follow another coloured section directly. Two tinted bands in a row — even different colour families — is always wrong.
 
 **Sage** is the primary section colour — Sage-Pale (#EDF7ED) and Sage-Light (#D9EED9) are the most commonly used section backgrounds across all pages (Community, Security, features, models).
 
@@ -1052,7 +1057,7 @@ Cards never have a border or stroke. The card's background colour provides all t
 - Don't use rectangular buttons — all interactive pill elements use `{rounded.full}`
 - Don't add drop shadows — depth comes from background contrast, not elevation shadows
 - Don't use any font weight other than Regular (400) — no Medium, no Bold
-- Don't place two same-background bands adjacent to each other without a transition band
+- Don't place two coloured sections adjacent to each other — every coloured band must be separated by a white section on both sides
 - Don't miniaturize the protein render — it's a hero element, not an icon
 - Don't use positive letter-spacing on headlines — all display type tracks tight (negative)
 
