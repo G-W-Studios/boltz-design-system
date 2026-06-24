@@ -2,8 +2,9 @@ import * as React from 'react';
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import {
   NavBar, NavLink, Button, TextButton, EyebrowLabel,
-  PrimaryHero, SectionHeader, SplitSection, FeatureGrid,
+  PrimaryHero, SectionHeader, SplitSection,
   Section, StatBand, AboutNews, BlogThumbnail, CommunitySection, Footer,
+  CardMedium, CardGroup,
   Blob, BLOB_COUNT,
 } from '@boltz/ui';
 import { Leaf, Community, Globe, Group, HeartSolid } from 'iconoir-react';
@@ -174,7 +175,11 @@ export const About: Story = {
             title="What we believe"
             subtitle="Three principles guide every model we train, every product we ship, and every hire we make."
           />
-          <FeatureGrid items={values} columns={3} />
+          <CardGroup className="grid grid-cols-1 mobile:grid-cols-2 tablet:grid-cols-3">
+            {values.map((v) => (
+              <CardMedium key={v.heading} color={v.color} heading={v.heading} body={v.body} />
+            ))}
+          </CardGroup>
         </Section>
 
         {/* 5 — Investors & backing (tierra-100) — white sections on both sides */}

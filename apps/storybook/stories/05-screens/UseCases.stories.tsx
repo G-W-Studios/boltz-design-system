@@ -2,7 +2,7 @@ import * as React from 'react';
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import {
   NavBar, NavLink, Button, TextButton, EyebrowLabel,
-  PrimaryHero, SectionHeader, SplitSection, FeatureGrid,
+  PrimaryHero, SectionHeader, SplitSection,
   Section, TabBar, CodeBlock, CardMedium, CardGroup,
   CommunitySection, CTABand, Footer,
   Blob, BLOB_COUNT,
@@ -210,7 +210,11 @@ export const UseCases: Story = {
             subtitle="Boltz models are designed to fit into existing research workflows — no DevOps, no infrastructure, just results."
             action={<Button variant="black">Try Boltz Lab</Button>}
           />
-          <FeatureGrid items={scientistFeatures} columns={3} />
+          <CardGroup className="grid grid-cols-1 mobile:grid-cols-2 tablet:grid-cols-3">
+            {scientistFeatures.map((f) => (
+              <CardMedium key={f.heading} color={f.color} heading={f.heading} body={f.body} />
+            ))}
+          </CardGroup>
         </Section>
 
         {/* 3 — Developers */}
@@ -260,7 +264,11 @@ export const UseCases: Story = {
             subtitle="Deploy Boltz in your own VPC or fully on-premise. Complete data residency, SOC 2 compliance, and dedicated capacity — shaped for the most regulated workloads in the world."
             action={<TextButton arrow>Contact enterprise sales</TextButton>}
           />
-          <FeatureGrid items={enterpriseFeatures} columns={3} />
+          <CardGroup className="grid grid-cols-1 mobile:grid-cols-2 tablet:grid-cols-3">
+            {enterpriseFeatures.map((f) => (
+              <CardMedium key={f.heading} color={f.color} heading={f.heading} body={f.body} />
+            ))}
+          </CardGroup>
         </Section>
 
         {/* 6 — Community proof */}
