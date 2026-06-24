@@ -124,7 +124,7 @@ function PersonaSection() {
   const persona = personas.find((p) => p.value === active) ?? personas[0];
 
   return (
-    <Section tone="secondary" innerClassName="flex flex-col items-center gap-xl">
+    <Section innerClassName="flex flex-col items-center gap-xl">
       <SectionHeader
         eyebrow="How you can use Boltz"
         eyebrowIcon={<Code {...sz} />}
@@ -147,8 +147,8 @@ function PersonaSection() {
 // ── Feature grids per use case ────────────────────────────────────────────────
 const scientistFeatures = [
   { icon: <Atom {...iSz} />,  color: 'sage-light'  as const, heading: 'Protein structure prediction', body: 'State-of-the-art accuracy on novel folds — exceeding AlphaFold2 GDT_TS benchmarks.' },
-  { icon: <Flask {...iSz} />, color: 'sage-medium' as const, heading: 'Small-molecule screening',      body: '10× faster than the previous SOTA at 100× lower cost per prediction.' },
-  { icon: <Dna {...iSz} />,   color: 'sage-light'  as const, heading: 'Multi-molecular design',        body: 'Co-fold proteins, ligands, DNA, and RNA in a single end-to-end prediction run.' },
+  { icon: <Flask {...iSz} />, color: 'sage-dark'   as const, heading: 'Small-molecule screening',      body: '10× faster than the previous SOTA at 100× lower cost per prediction.' },
+  { icon: <Dna {...iSz} />,   color: 'sage-medium' as const, heading: 'Multi-molecular design',        body: 'Co-fold proteins, ligands, DNA, and RNA in a single end-to-end prediction run.' },
 ];
 
 const developerFeatures = [
@@ -158,9 +158,9 @@ const developerFeatures = [
 ];
 
 const enterpriseFeatures = [
-  { icon: <Building {...iSz} />,    color: 'sage-light'  as const, heading: 'VPC & on-premise deployment', body: 'All compute stays inside your infrastructure. No data leaves your perimeter.' },
-  { icon: <ShieldCheck {...iSz} />, color: 'sage-medium' as const, heading: 'SOC 2 Type II certified',      body: 'Full audit trail, role-based access control, and end-to-end encryption at rest and in transit.' },
-  { icon: <Community {...iSz} />,   color: 'sage-light'  as const, heading: 'Dedicated success team',       body: 'Onboarding, model integration support, and quarterly business reviews included.' },
+  { icon: <Building {...iSz} />,    color: 'tierra-100' as const, heading: 'VPC & on-premise deployment', body: 'All compute stays inside your infrastructure. No data leaves your perimeter.' },
+  { icon: <ShieldCheck {...iSz} />, color: 'tierra-200' as const, heading: 'SOC 2 Type II certified',      body: 'Full audit trail, role-based access control, and end-to-end encryption at rest and in transit.' },
+  { icon: <Community {...iSz} />,   color: 'tierra-100' as const, heading: 'Dedicated success team',       body: 'Onboarding, model integration support, and quarterly business reviews included.' },
 ];
 
 // ── CTA rows ──────────────────────────────────────────────────────────────────
@@ -202,7 +202,7 @@ export const UseCases: Story = {
         />
 
         {/* 2 — Scientists */}
-        <Section tone="sage-pale" innerClassName="flex flex-col gap-2xl">
+        <Section innerClassName="flex flex-col gap-2xl">
           <SectionHeader
             eyebrow="For scientists"
             eyebrowIcon={<Leaf {...sz} />}
@@ -252,7 +252,7 @@ export const UseCases: Story = {
         <PersonaSection />
 
         {/* 5 — Enterprise */}
-        <Section tone="sage-pale" innerClassName="flex flex-col gap-2xl">
+        <Section innerClassName="flex flex-col gap-2xl">
           <SectionHeader
             eyebrow="For enterprise"
             eyebrowIcon={<Building {...sz} />}
