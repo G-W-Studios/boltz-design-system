@@ -146,21 +146,21 @@ function PersonaSection() {
 
 // ── Feature grids per use case ────────────────────────────────────────────────
 const scientistFeatures = [
-  { icon: <Atom {...iSz} />,      heading: 'Protein structure prediction', body: 'State-of-the-art accuracy on novel folds — exceeding AlphaFold2 GDT_TS benchmarks.' },
-  { icon: <Flask {...iSz} />,     heading: 'Small-molecule screening',      body: '10× faster than the previous SOTA at 100× lower cost per prediction.' },
-  { icon: <Dna {...iSz} />, heading: 'Multi-molecular design',        body: 'Co-fold proteins, ligands, DNA, and RNA in a single end-to-end prediction run.' },
+  { icon: <Atom {...iSz} />,  color: 'sage-light'  as const, heading: 'Protein structure prediction', body: 'State-of-the-art accuracy on novel folds — exceeding AlphaFold2 GDT_TS benchmarks.' },
+  { icon: <Flask {...iSz} />, color: 'sage-medium' as const, heading: 'Small-molecule screening',      body: '10× faster than the previous SOTA at 100× lower cost per prediction.' },
+  { icon: <Dna {...iSz} />,   color: 'sage-light'  as const, heading: 'Multi-molecular design',        body: 'Co-fold proteins, ligands, DNA, and RNA in a single end-to-end prediction run.' },
 ];
 
 const developerFeatures = [
-  { icon: <Code {...iSz} />,     heading: 'REST API & typed SDKs',   body: 'Python and TypeScript clients with full type coverage, async support, and retries built in.' },
-  { icon: <Cpu {...iSz} />,      heading: 'Batch inference at scale', body: 'Submit thousands of sequences in a single job. Webhooks notify you on completion.' },
-  { icon: <GitFork {...iSz} />,  heading: 'Fine-tuning on your data', body: 'Adapt any Boltz model to your proprietary compound library or protein family.' },
+  { icon: <Code {...iSz} />,    color: 'blue-light'  as const, heading: 'REST API & typed SDKs',   body: 'Python and TypeScript clients with full type coverage, async support, and retries built in.' },
+  { icon: <Cpu {...iSz} />,     color: 'blue-medium' as const, heading: 'Batch inference at scale', body: 'Submit thousands of sequences in a single job. Webhooks notify you on completion.' },
+  { icon: <GitFork {...iSz} />, color: 'blue-light'  as const, heading: 'Fine-tuning on your data', body: 'Adapt any Boltz model to your proprietary compound library or protein family.' },
 ];
 
 const enterpriseFeatures = [
-  { icon: <Building {...iSz} />,    heading: 'VPC & on-premise deployment', body: 'All compute stays inside your infrastructure. No data leaves your perimeter.' },
-  { icon: <ShieldCheck {...iSz} />, heading: 'SOC 2 Type II certified',      body: 'Full audit trail, role-based access control, and end-to-end encryption at rest and in transit.' },
-  { icon: <Community {...iSz} />,   heading: 'Dedicated success team',       body: 'Onboarding, model integration support, and quarterly business reviews included.' },
+  { icon: <Building {...iSz} />,    color: 'sage-light'  as const, heading: 'VPC & on-premise deployment', body: 'All compute stays inside your infrastructure. No data leaves your perimeter.' },
+  { icon: <ShieldCheck {...iSz} />, color: 'sage-medium' as const, heading: 'SOC 2 Type II certified',      body: 'Full audit trail, role-based access control, and end-to-end encryption at rest and in transit.' },
+  { icon: <Community {...iSz} />,   color: 'sage-light'  as const, heading: 'Dedicated success team',       body: 'Onboarding, model integration support, and quarterly business reviews included.' },
 ];
 
 // ── CTA rows ──────────────────────────────────────────────────────────────────
@@ -239,7 +239,7 @@ export const UseCases: Story = {
               {developerFeatures.map((f) => (
                 <CardMedium
                   key={f.heading}
-                  color="blue-pale"
+                  color={f.color}
                   heading={f.heading}
                   body={f.body}
                 />
