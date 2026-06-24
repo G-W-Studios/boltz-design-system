@@ -152,9 +152,9 @@ const scientistFeatures = [
 ];
 
 const developerFeatures = [
-  { icon: <Code {...iSz} />,    color: 'blue-light'  as const, heading: 'REST API & typed SDKs',   body: 'Python and TypeScript clients with full type coverage, async support, and retries built in.' },
-  { icon: <Cpu {...iSz} />,     color: 'blue-medium' as const, heading: 'Batch inference at scale', body: 'Submit thousands of sequences in a single job. Webhooks notify you on completion.' },
-  { icon: <GitFork {...iSz} />, color: 'blue-light'  as const, heading: 'Fine-tuning on your data', body: 'Adapt any Boltz model to your proprietary compound library or protein family.' },
+  { icon: <Code {...iSz} />,    color: 'blue-dark'   as const, heading: 'REST API & typed SDKs',   body: 'Python and TypeScript clients with full type coverage, async support, and retries built in.' },
+  { icon: <Cpu {...iSz} />,     color: 'blue-light'  as const, heading: 'Batch inference at scale', body: 'Submit thousands of sequences in a single job. Webhooks notify you on completion.' },
+  { icon: <GitFork {...iSz} />, color: 'blue-medium' as const, heading: 'Fine-tuning on your data', body: 'Adapt any Boltz model to your proprietary compound library or protein family.' },
 ];
 
 const enterpriseFeatures = [

@@ -1018,11 +1018,13 @@ The scale always steps up relative to the background. White is the lightest surf
 
 | Section background | Card shades to use |
 |---|---|
-| White (`#FFFFFF`) | **Pale variants only** — Sage-Pale, Blue-Pale, Tierra-50 |
-| Sage-Pale section | Sage-Light, Sage-Medium, or Sage-Dark |
-| Blue-Pale section | Blue-Light, Blue-Medium, or Blue-Dark |
-| Tierra-100 section | Tierra-200 or Tierra-500 |
+| White (`#FFFFFF`) | **Pale only** — Sage-Pale, Blue-Pale, Tierra-50 |
+| Sage-Pale section | Mix of Sage-Light, Sage-Medium, Sage-Dark |
+| Blue-Pale section | Mix of Blue-Light, Blue-Medium, Blue-Dark |
+| Tierra-100 section | Mix of Tierra-200, Tierra-500 |
 | Dark (`#232323`) | Any pale or light variant — high contrast reversal |
+
+**Shade mixing on coloured sections:** When a coloured section has multiple cards, use a mix of up to 3 shades from that family (Light, Medium, Dark). The order can be random — variety is the point. Never use the Pale variant on a coloured section background (e.g. no Sage-Pale card on a Sage-Pale section). On white, all cards use the Pale variant — no mixing needed.
 
 ### Card gaps — connected vs standalone
 
